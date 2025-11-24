@@ -1,0 +1,14 @@
+server/logs
+server/*.log
+server/data
+server/.env
+
+client/dist/
+client/node_modules/
+server/node_modules/
+
+.vscode/*
+!.vscode/extensions.json
+
+dist
+.env
