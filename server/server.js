@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 import { authMiddleware, handleLogin } from './auth.js';
 import { resolvers } from './resolvers.js';
 
-const PORT = 9000;
+const PORT = 8080;
 
 const app = express();
 app.use(cors(), express.json());
