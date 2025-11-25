@@ -23,6 +23,8 @@ const httpLink = authLink.concat(
 const wsLink = new GraphQLWsLink(
     createWsClient({
         url: "ws://localhost:8080/graphql",
+        connectionParams: () => ({ accessToken: getAccessToken() }),
+        //add params as functions coz otherwise access token generated when code loaded, so user may not be logged in then so itll come to be null but as a func, it is run only when conn to be estabished.
     })
 );
 
